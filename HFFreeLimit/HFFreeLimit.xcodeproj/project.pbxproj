@@ -16,6 +16,7 @@
 		BC4E2D321D07F11800A1B468 /* HFFreeLimitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E2D311D07F11800A1B468 /* HFFreeLimitTests.m */; };
 		BC4E2D3D1D07F5FB00A1B468 /* HFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */; };
 		BC4E2D3F1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4E2D3E1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png */; };
+		BC4E2D431D07FA1300A1B468 /* terribleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E2D421D07FA1300A1B468 /* terribleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		BC4E2D3B1D07F5FB00A1B468 /* HFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFViewController.h; sourceTree = "<group>"; };
 		BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFViewController.m; sourceTree = "<group>"; };
 		BC4E2D3E1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QFImage_2016-06-02_14.6.38.png"; sourceTree = "<group>"; };
+		BC4E2D411D07FA1300A1B468 /* terribleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = terribleViewController.h; sourceTree = "<group>"; };
+		BC4E2D421D07FA1300A1B468 /* terribleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = terribleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 				BC4E2D3E1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png */,
 				BC4E2D3B1D07F5FB00A1B468 /* HFViewController.h */,
 				BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */,
+				BC4E2D401D07F9F800A1B468 /* New */,
 				BC4E2D191D07F11800A1B468 /* AppDelegate.h */,
 				BC4E2D1A1D07F11800A1B468 /* AppDelegate.m */,
 				BC4E2D1C1D07F11800A1B468 /* ViewController.h */,
@@ -125,6 +129,15 @@
 				BC4E2D301D07F11800A1B468 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC4E2D401D07F9F800A1B468 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				BC4E2D411D07FA1300A1B468 /* terribleViewController.h */,
+				BC4E2D421D07FA1300A1B468 /* terribleViewController.m */,
+			);
+			name = New;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +245,7 @@
 				BC4E2D1B1D07F11800A1B468 /* AppDelegate.m in Sources */,
 				BC4E2D3D1D07F5FB00A1B468 /* HFViewController.m in Sources */,
 				BC4E2D181D07F11800A1B468 /* main.m in Sources */,
+				BC4E2D431D07FA1300A1B468 /* terribleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
