@@ -15,6 +15,7 @@
 		BC4E2D261D07F11800A1B468 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4E2D241D07F11800A1B468 /* LaunchScreen.xib */; };
 		BC4E2D321D07F11800A1B468 /* HFFreeLimitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E2D311D07F11800A1B468 /* HFFreeLimitTests.m */; };
 		BC4E2D3D1D07F5FB00A1B468 /* HFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */; };
+		BC4E2D3F1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4E2D3E1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		BC4E2D311D07F11800A1B468 /* HFFreeLimitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFFreeLimitTests.m; sourceTree = "<group>"; };
 		BC4E2D3B1D07F5FB00A1B468 /* HFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFViewController.h; sourceTree = "<group>"; };
 		BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFViewController.m; sourceTree = "<group>"; };
+		BC4E2D3E1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QFImage_2016-06-02_14.6.38.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		BC4E2D141D07F11800A1B468 /* HFFreeLimit */ = {
 			isa = PBXGroup;
 			children = (
+				BC4E2D3E1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png */,
 				BC4E2D3B1D07F5FB00A1B468 /* HFViewController.h */,
 				BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */,
 				BC4E2D191D07F11800A1B468 /* AppDelegate.h */,
@@ -206,6 +209,7 @@
 			files = (
 				BC4E2D211D07F11800A1B468 /* Main.storyboard in Resources */,
 				BC4E2D261D07F11800A1B468 /* LaunchScreen.xib in Resources */,
+				BC4E2D3F1D07F77900A1B468 /* QFImage_2016-06-02_14.6.38.png in Resources */,
 				BC4E2D231D07F11800A1B468 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
