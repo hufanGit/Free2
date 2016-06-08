@@ -14,6 +14,7 @@
 		BC4E2D231D07F11800A1B468 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4E2D221D07F11800A1B468 /* Images.xcassets */; };
 		BC4E2D261D07F11800A1B468 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4E2D241D07F11800A1B468 /* LaunchScreen.xib */; };
 		BC4E2D321D07F11800A1B468 /* HFFreeLimitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E2D311D07F11800A1B468 /* HFFreeLimitTests.m */; };
+		BC4E2D3D1D07F5FB00A1B468 /* HFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		BC4E2D2B1D07F11800A1B468 /* HFFreeLimitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HFFreeLimitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4E2D301D07F11800A1B468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC4E2D311D07F11800A1B468 /* HFFreeLimitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFFreeLimitTests.m; sourceTree = "<group>"; };
+		BC4E2D3B1D07F5FB00A1B468 /* HFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFViewController.h; sourceTree = "<group>"; };
+		BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		BC4E2D141D07F11800A1B468 /* HFFreeLimit */ = {
 			isa = PBXGroup;
 			children = (
+				BC4E2D3B1D07F5FB00A1B468 /* HFViewController.h */,
+				BC4E2D3C1D07F5FB00A1B468 /* HFViewController.m */,
 				BC4E2D191D07F11800A1B468 /* AppDelegate.h */,
 				BC4E2D1A1D07F11800A1B468 /* AppDelegate.m */,
 				BC4E2D1C1D07F11800A1B468 /* ViewController.h */,
@@ -221,6 +226,7 @@
 			files = (
 				BC4E2D1E1D07F11800A1B468 /* ViewController.m in Sources */,
 				BC4E2D1B1D07F11800A1B468 /* AppDelegate.m in Sources */,
+				BC4E2D3D1D07F5FB00A1B468 /* HFViewController.m in Sources */,
 				BC4E2D181D07F11800A1B468 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +422,7 @@
 				BC4E2D371D07F11800A1B468 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC4E2D381D07F11800A1B468 /* Build configuration list for PBXNativeTarget "HFFreeLimitTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				BC4E2D3A1D07F11800A1B468 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
