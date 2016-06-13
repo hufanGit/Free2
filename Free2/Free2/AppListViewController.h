@@ -10,4 +10,7 @@
 
 @interface AppListViewController : BasicViewController
 
+//保存当前的类别
+@property(nonatomic,copy)NSString *cateId;
+
 @end

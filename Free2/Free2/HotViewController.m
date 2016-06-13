@@ -30,6 +30,7 @@
         //在创建时候给一个请求地址、
         self.requestURL = kHotUrl;
     }
+    
     return self;
 }
 

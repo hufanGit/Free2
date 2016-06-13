@@ -16,4 +16,7 @@
 #import "Define.h"
 #import <AFNetworking.h>
 
+#import "CategoryModel.h"
+#import <YYModel.h>
+
 #endif

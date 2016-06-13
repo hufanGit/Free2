@@ -24,6 +24,7 @@
     if (self = [super init]) {
         //在创建时候给一个请求地址、
         self.requestURL = kLimitUrl;
+        
     }
     return self;
 }

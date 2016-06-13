@@ -197,6 +197,11 @@
 		BC9C5E111D0D9091007ED7A1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E101D0D9091007ED7A1 /* CoreTelephony.framework */; };
 		BC9C5E131D0D909B007ED7A1 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E121D0D909B007ED7A1 /* libstdc++.dylib */; };
 		BC9C5E151D0D90A4007ED7A1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E141D0D90A4007ED7A1 /* libz.dylib */; };
+		BCA3E9C81D0E513B0070FB87 /* AppListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3E9C71D0E513B0070FB87 /* AppListModel.m */; };
+		BCA3E9CC1D0E58C50070FB87 /* AppListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3E9CA1D0E58C50070FB87 /* AppListCell.m */; };
+		BCA3E9CD1D0E58C50070FB87 /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA3E9CB1D0E58C50070FB87 /* AppListCell.xib */; };
+		BCA3E9D01D0E864A0070FB87 /* HFStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3E9CF1D0E864A0070FB87 /* HFStarView.m */; };
+		BCA3E9D31D0EA06C0070FB87 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3E9D21D0EA06C0070FB87 /* CategoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -424,6 +429,15 @@
 		BC9C5E121D0D909B007ED7A1 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		BC9C5E141D0D90A4007ED7A1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BCA3E9C51D0E40290070FB87 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		BCA3E9C61D0E513B0070FB87 /* AppListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListModel.h; sourceTree = "<group>"; };
+		BCA3E9C71D0E513B0070FB87 /* AppListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListModel.m; sourceTree = "<group>"; };
+		BCA3E9C91D0E58C50070FB87 /* AppListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppListCell.h; path = cell/AppListCell.h; sourceTree = "<group>"; };
+		BCA3E9CA1D0E58C50070FB87 /* AppListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppListCell.m; path = cell/AppListCell.m; sourceTree = "<group>"; };
+		BCA3E9CB1D0E58C50070FB87 /* AppListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppListCell.xib; path = cell/AppListCell.xib; sourceTree = "<group>"; };
+		BCA3E9CE1D0E864A0070FB87 /* HFStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFStarView.h; path = star/HFStarView.h; sourceTree = "<group>"; };
+		BCA3E9CF1D0E864A0070FB87 /* HFStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFStarView.m; path = star/HFStarView.m; sourceTree = "<group>"; };
+		BCA3E9D11D0EA06C0070FB87 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		BCA3E9D21D0EA06C0070FB87 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -820,6 +834,11 @@
 		BC9C5CD41D0D042D007ED7A1 /* views - 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				BCA3E9C91D0E58C50070FB87 /* AppListCell.h */,
+				BCA3E9CA1D0E58C50070FB87 /* AppListCell.m */,
+				BCA3E9CB1D0E58C50070FB87 /* AppListCell.xib */,
+				BCA3E9CE1D0E864A0070FB87 /* HFStarView.h */,
+				BCA3E9CF1D0E864A0070FB87 /* HFStarView.m */,
 			);
 			name = "views - 视图";
 			sourceTree = "<group>";
@@ -842,6 +861,10 @@
 		BC9C5CD61D0D0448007ED7A1 /* models - 模型 */ = {
 			isa = PBXGroup;
 			children = (
+				BCA3E9C61D0E513B0070FB87 /* AppListModel.h */,
+				BCA3E9C71D0E513B0070FB87 /* AppListModel.m */,
+				BCA3E9D11D0EA06C0070FB87 /* CategoryModel.h */,
+				BCA3E9D21D0EA06C0070FB87 /* CategoryModel.m */,
 			);
 			name = "models - 模型";
 			sourceTree = "<group>";
@@ -1028,6 +1051,7 @@
 				BC9C5CC81D0CFA8A007ED7A1 /* user_browse.png in Resources */,
 				BC9C5C9D1D0CFA8A007ED7A1 /* tabbar_limitfree_press.png in Resources */,
 				BC9C5C381D0CFA8A007ED7A1 /* account_collect@2x.png in Resources */,
+				BCA3E9CD1D0E58C50070FB87 /* AppListCell.xib in Resources */,
 				BC9C5C6E1D0CFA8A007ED7A1 /* category_Refer.jpg in Resources */,
 				BC9C5C871D0CFA8A007ED7A1 /* loadmore@2x.png in Resources */,
 				BC9C5C841D0CFA8A007ED7A1 /* Detail_btn_right.png in Resources */,
@@ -1254,8 +1278,12 @@
 				BC9C5CE51D0D0671007ED7A1 /* HotViewController.m in Sources */,
 				BC9C5CE81D0D069D007ED7A1 /* SubjectViewController.m in Sources */,
 				BC9C5D041D0D5314007ED7A1 /* CategoryViewController.m in Sources */,
+				BCA3E9D31D0EA06C0070FB87 /* CategoryModel.m in Sources */,
 				BC9C5B651D0CF5EC007ED7A1 /* ViewController.m in Sources */,
 				BC9C5CDF1D0D051B007ED7A1 /* BasicViewController.m in Sources */,
+				BCA3E9CC1D0E58C50070FB87 /* AppListCell.m in Sources */,
+				BCA3E9D01D0E864A0070FB87 /* HFStarView.m in Sources */,
+				BCA3E9C81D0E513B0070FB87 /* AppListModel.m in Sources */,
 				BC9C5B621D0CF5EC007ED7A1 /* AppDelegate.m in Sources */,
 				BC9C5CFD1D0D3C0F007ED7A1 /* UIColor+HFColor.m in Sources */,
 				BC9C5CF91D0D10F8007ED7A1 /* CustomNavitationController.m in Sources */,
