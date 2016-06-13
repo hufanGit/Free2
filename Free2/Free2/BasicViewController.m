@@ -10,6 +10,8 @@
 
 @interface BasicViewController ()
 
+
+
 @end
 
 @implementation BasicViewController
@@ -24,6 +26,23 @@
 
 }
 
+#pragma mark 懒加载实例化af管理者
+
+-(AFHTTPSessionManager *)requestManager
+{
+    if (!_requestManager) {
+        
+        //实例化时候是个类方法。
+        _requestManager = [AFHTTPSessionManager manager];
+        
+        //设置json 序列化，将json转化成数组
+        _requestManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        //在序列化中追加一个类型。这个类型就是即将要支持的类型
+        _requestManager.responseSerializer.acceptableContentTypes = [_requestManager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    }
+    return _requestManager;
+}
 
 
 

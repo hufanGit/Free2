@@ -13,5 +13,7 @@
 #import "UIColor+HFColor.h"
 #import <Masonry.h>
 #import <MJRefresh.h>
+#import "Define.h"
+#import <AFNetworking.h>
 
 #endif

@@ -41,26 +41,27 @@
     
     [self .view addSubview:self.categoryTableView];
     
+    //添加约束
+    __weak typeof(self) weakself = self;
     [self.categoryTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+        make.edges.equalTo(weakself.view);
     }];
     
     [self addMJRefresh];
-
 }
 
-#pragma mark 刷新控件。
--(void)addMJRefresh
-{
+#pragma mark - 添加刷新控件
+- (void)addMJRefresh {
+    
+    //下拉
     self.categoryTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
-        //刷新
+        //进入刷新状态后会调用
         [self.categoryTableView.mj_header endRefreshing];
     }];
     
+    //上拉
     self.categoryTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [self.categoryTableView.mj_footer endRefreshing];
-        
     }];
 }
 

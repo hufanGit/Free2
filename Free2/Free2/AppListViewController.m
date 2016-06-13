@@ -23,8 +23,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self resquestDataWithPage:1 search:@"" cate_ID:@""];
     
 }
+
+#pragma mark 数据请求
+-(void)resquestDataWithPage:(NSInteger)page search:(NSString *)search cate_ID:(NSString*)cate_ID
+{
+    //使用AFnetworking
+    [self.requestManager GET:self.requestURL parameters:@{@"page":[NSNumber numberWithInteger:page],@"number":@20,@"search":search,@"cate_id":cate_ID} success:^(NSURLSessionDataTask *task, id responseObject)
+    {
+        NSLog(@"请求成功");
+        NSLog(@"%@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error)
+    {
+        NSLog(@"请求失败");
+    }];
+}
+
+
 
 #pragma mark 创建界面
 -(void)creatUI

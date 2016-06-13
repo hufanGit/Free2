@@ -8,6 +8,8 @@
 
 #import "SubjectViewController.h"
 
+
+
 @interface SubjectViewController ()
 
 @property(nonatomic,strong)UITableView *subjectTableView;
@@ -15,6 +17,16 @@
 @end
 
 @implementation SubjectViewController
+
+-(instancetype)init
+{
+    if (self = [super init]) {
+        //在创建时候给一个请求地址、
+        self.requestURL = kSubjectUrl;
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

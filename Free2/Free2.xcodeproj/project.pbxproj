@@ -189,6 +189,14 @@
 		BC9C5CFD1D0D3C0F007ED7A1 /* UIColor+HFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C5CFC1D0D3C0F007ED7A1 /* UIColor+HFColor.m */; };
 		BC9C5D041D0D5314007ED7A1 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C5D031D0D5314007ED7A1 /* CategoryViewController.m */; };
 		BC9C5D081D0D534F007ED7A1 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C5D071D0D534F007ED7A1 /* SettingViewController.m */; };
+		BC9C5E071D0D8FB9007ED7A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E061D0D8FB9007ED7A1 /* SystemConfiguration.framework */; };
+		BC9C5E091D0D904D007ED7A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E081D0D904D007ED7A1 /* Security.framework */; };
+		BC9C5E0B1D0D905C007ED7A1 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E0A1D0D905C007ED7A1 /* libiconv.dylib */; };
+		BC9C5E0D1D0D9068007ED7A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E0C1D0D9068007ED7A1 /* CoreGraphics.framework */; };
+		BC9C5E0F1D0D9075007ED7A1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E0E1D0D9075007ED7A1 /* libsqlite3.dylib */; };
+		BC9C5E111D0D9091007ED7A1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E101D0D9091007ED7A1 /* CoreTelephony.framework */; };
+		BC9C5E131D0D909B007ED7A1 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E121D0D909B007ED7A1 /* libstdc++.dylib */; };
+		BC9C5E151D0D90A4007ED7A1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9C5E141D0D90A4007ED7A1 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -407,6 +415,15 @@
 		BC9C5D031D0D5314007ED7A1 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		BC9C5D061D0D534F007ED7A1 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		BC9C5D071D0D534F007ED7A1 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		BC9C5E061D0D8FB9007ED7A1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BC9C5E081D0D904D007ED7A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BC9C5E0A1D0D905C007ED7A1 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		BC9C5E0C1D0D9068007ED7A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BC9C5E0E1D0D9075007ED7A1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BC9C5E101D0D9091007ED7A1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BC9C5E121D0D909B007ED7A1 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		BC9C5E141D0D90A4007ED7A1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BCA3E9C51D0E40290070FB87 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +431,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9C5E151D0D90A4007ED7A1 /* libz.dylib in Frameworks */,
+				BC9C5E131D0D909B007ED7A1 /* libstdc++.dylib in Frameworks */,
+				BC9C5E111D0D9091007ED7A1 /* CoreTelephony.framework in Frameworks */,
+				BC9C5E0F1D0D9075007ED7A1 /* libsqlite3.dylib in Frameworks */,
+				BC9C5E0D1D0D9068007ED7A1 /* CoreGraphics.framework in Frameworks */,
+				BC9C5E0B1D0D905C007ED7A1 /* libiconv.dylib in Frameworks */,
+				BC9C5E091D0D904D007ED7A1 /* Security.framework in Frameworks */,
+				BC9C5E071D0D8FB9007ED7A1 /* SystemConfiguration.framework in Frameworks */,
 				27A447BF30D639983DC2BC52 /* libPods-Free2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +456,14 @@
 		98F733E05E54EF8C31EA2CB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC9C5E141D0D90A4007ED7A1 /* libz.dylib */,
+				BC9C5E121D0D909B007ED7A1 /* libstdc++.dylib */,
+				BC9C5E101D0D9091007ED7A1 /* CoreTelephony.framework */,
+				BC9C5E0E1D0D9075007ED7A1 /* libsqlite3.dylib */,
+				BC9C5E0C1D0D9068007ED7A1 /* CoreGraphics.framework */,
+				BC9C5E0A1D0D905C007ED7A1 /* libiconv.dylib */,
+				BC9C5E081D0D904D007ED7A1 /* Security.framework */,
+				BC9C5E061D0D8FB9007ED7A1 /* SystemConfiguration.framework */,
 				1DD86DFC21996B9952CDE3A0 /* libPods-Free2.a */,
 			);
 			name = Frameworks;
@@ -876,6 +909,7 @@
 		BC9C5CFA1D0D3B7A007ED7A1 /* common - 公共 */ = {
 			isa = PBXGroup;
 			children = (
+				BCA3E9C51D0E40290070FB87 /* Define.h */,
 				BC9C5CFB1D0D3C0F007ED7A1 /* UIColor+HFColor.h */,
 				BC9C5CFC1D0D3C0F007ED7A1 /* UIColor+HFColor.m */,
 				BC9C5CFE1D0D3F44007ED7A1 /* PrefixHeader.pch */,
@@ -967,6 +1001,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = BC9C5B501D0CF5EC007ED7A1;
 			productRefGroup = BC9C5B5A1D0CF5EC007ED7A1 /* Products */;
@@ -1357,9 +1392,21 @@
 			baseConfigurationReference = 3173C21DAE4C1EF959CFBA33 /* Pods-Free2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Resource/umsdk_IOS_analyics_idfa_v4.0.4",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Free2/PrefixHeader.pch";
 				INFOPLIST_FILE = Free2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_5.2.1",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/SinaSSO",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/Wechat",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1369,9 +1416,21 @@
 			baseConfigurationReference = 10EF9CE5D50A6460EF54D727 /* Pods-Free2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Resource/umsdk_IOS_analyics_idfa_v4.0.4",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Free2/PrefixHeader.pch";
 				INFOPLIST_FILE = Free2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_5.2.1",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/SinaSSO",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/Resource/umeng_ios_social_sdk_5.2.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/Wechat",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

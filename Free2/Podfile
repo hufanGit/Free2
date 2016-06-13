@@ -3,4 +3,6 @@ target 'Free2' do
 pod 'AFNetworking','~>2.5.4'
 pod 'MJRefresh'
 pod 'Masonry'
+pod 'YYModel','~>0.9.9'
+
 end
