@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="bigImageViewController">
+            <connections>
+                <outlet property="BigcollectionView" destination="3G1-gj-rcc" id="Guy-Xs-jUc"/>
+                <outlet property="bottomConstraint" destination="PHM-ef-KG3" id="LeV-xV-oOS"/>
+                <outlet property="pageSIzeLabel" destination="zJ3-Cy-dMK" id="3Ck-U8-QpH"/>
+                <outlet property="topViewConstraint" destination="viv-i7-vfN" id="bRZ-2R-fQW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3G1-gj-rcc">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ul7-22-dSK">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ifb-F9-Rer"/>
+                        <outlet property="delegate" destination="-1" id="oKZ-pc-hQs"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8C-iM-YOd" userLabel="TopView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appproduct_searchbar.png" translatesAutoresizingMaskIntoConstraints="NO" id="kR9-Tx-czS">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fh8-eR-qKX">
+                            <rect key="frame" x="230" y="17" width="67" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="Irw-UF-bU6"/>
+                                <constraint firstAttribute="width" constant="67" id="rsW-UO-dmX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="返回" backgroundImage="buttonbar_edit.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backButton:" destination="-1" eventType="touchUpInside" id="azH-tC-1ad"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="屌" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ3-Cy-dMK">
+                            <rect key="frame" x="130" y="25" width="60" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99281881309999997" green="0.44267947359999998" blue="0.46096630080000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Fh8-eR-qKX" firstAttribute="leading" secondItem="zJ3-Cy-dMK" secondAttribute="trailing" constant="40" id="0Nw-Of-8RK"/>
+                        <constraint firstItem="kR9-Tx-czS" firstAttribute="top" secondItem="o8C-iM-YOd" secondAttribute="top" id="5Sq-rF-f0L"/>
+                        <constraint firstAttribute="trailing" secondItem="kR9-Tx-czS" secondAttribute="trailing" id="9dy-Qe-dJf"/>
+                        <constraint firstAttribute="height" constant="70" id="C3g-pS-whT"/>
+                        <constraint firstItem="zJ3-Cy-dMK" firstAttribute="bottom" secondItem="o8C-iM-YOd" secondAttribute="bottomMargin" id="bfq-hk-C9P"/>
+                        <constraint firstAttribute="centerY" secondItem="kR9-Tx-czS" secondAttribute="centerY" id="dWd-mq-vR1"/>
+                        <constraint firstItem="kR9-Tx-czS" firstAttribute="centerY" secondItem="Fh8-eR-qKX" secondAttribute="centerY" id="fIC-K2-xTX"/>
+                        <constraint firstItem="zJ3-Cy-dMK" firstAttribute="top" secondItem="o8C-iM-YOd" secondAttribute="top" constant="25" id="ion-dy-vN1"/>
+                        <constraint firstItem="kR9-Tx-czS" firstAttribute="leading" secondItem="o8C-iM-YOd" secondAttribute="leading" id="njl-5V-ux8"/>
+                        <constraint firstAttribute="trailing" secondItem="Fh8-eR-qKX" secondAttribute="trailing" constant="23" id="qeS-xu-Zyc"/>
+                        <constraint firstAttribute="bottom" secondItem="kR9-Tx-czS" secondAttribute="bottom" id="sL2-IX-fFZ"/>
+                        <constraint firstItem="zJ3-Cy-dMK" firstAttribute="leading" secondItem="o8C-iM-YOd" secondAttribute="leading" constant="130" id="zeY-kP-4sp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBV-sL-b3F">
+                    <rect key="frame" x="0.0" y="410" width="320" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xz-8Q-wLe">
+                            <rect key="frame" x="246" y="20" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="nfi-cO-llw"/>
+                                <constraint firstAttribute="width" constant="46" id="scy-eg-zC4"/>
+                            </constraints>
+                            <state key="normal" title="保存" backgroundImage="buttonbar_edit.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="Szh-T2-09d"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86195384330000002" green="0.93959990709999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="Sj2-jg-scP"/>
+                        <constraint firstAttribute="trailing" secondItem="8xz-8Q-wLe" secondAttribute="trailing" constant="28" id="oSL-ZW-Rcy"/>
+                        <constraint firstAttribute="centerY" secondItem="8xz-8Q-wLe" secondAttribute="centerY" id="usI-oc-A4P"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3G1-gj-rcc" secondAttribute="trailing" id="51l-de-dVJ"/>
+                <constraint firstAttribute="bottom" secondItem="VBV-sL-b3F" secondAttribute="bottom" id="PHM-ef-KG3" userLabel="bottom"/>
+                <constraint firstItem="3G1-gj-rcc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pri-SJ-6ZC"/>
+                <constraint firstAttribute="trailing" secondItem="VBV-sL-b3F" secondAttribute="trailing" id="QaP-va-7ld"/>
+                <constraint firstItem="o8C-iM-YOd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bCn-6a-0wV"/>
+                <constraint firstAttribute="bottom" secondItem="3G1-gj-rcc" secondAttribute="bottom" id="dhi-jD-ZP1"/>
+                <constraint firstItem="VBV-sL-b3F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ghT-HM-Q07"/>
+                <constraint firstItem="3G1-gj-rcc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mKJ-T2-A2L"/>
+                <constraint firstItem="o8C-iM-YOd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="viv-i7-vfN" userLabel="top"/>
+                <constraint firstAttribute="trailing" secondItem="o8C-iM-YOd" secondAttribute="trailing" id="zsJ-uX-bvu"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="249" y="212"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="appproduct_searchbar.png" width="320" height="44"/>
+        <image name="buttonbar_edit.png" width="60" height="30"/>
+    </resources>
+</document>

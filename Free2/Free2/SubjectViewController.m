@@ -7,12 +7,14 @@
 //
 
 #import "SubjectViewController.h"
+#import "SubjectModel.h"
+#import "SubjectCell.h"
 
 
-
-@interface SubjectViewController ()
+@interface SubjectViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)UITableView *subjectTableView;
+@property(nonatomic,strong)NSMutableArray *dataArray;
 
 @end
 
@@ -27,10 +29,54 @@
     return self;
 }
 
+#pragma mark - 获取数据
+//page 分页 number 数量
+
+-(void)requestDataWithPage:(NSInteger)page
+{
+    [self.requestManager GET:self.requestURL parameters:@{@"page":[NSNumber numberWithInteger:page],@"number":@5} success:^(NSURLSessionDataTask *task, id responseObject)
+    {
+        
+        printf("专题成功\n");
+        
+        //将获取到的数据转化成模型数组。。
+        NSArray *modelArray = [NSArray yy_modelArrayWithClass:[SubjectModel class] json:responseObject];
+  
+        
+        
+        if([self.subjectTableView.mj_header isRefreshing])
+        {
+            [self.dataArray removeAllObjects];
+        }
+        [self.subjectTableView.mj_header endRefreshing];
+        [self.subjectTableView.mj_footer endRefreshing];
+        
+        [self.dataArray addObjectsFromArray:modelArray];
+        
+        [self.subjectTableView reloadData];
+        
+        
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error)
+    {
+        printf("专题请求失败\n");
+    }];
+}
+
+#pragma mark  懒加载
+-(NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray new];
+    }
+    return _dataArray;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self requestDataWithPage:1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,10 +100,34 @@
         make.edges.equalTo(self.view);
     }];
     
+    self.subjectTableView.delegate  =self;
+    self.subjectTableView.dataSource= self;
     
+    self.subjectTableView.rowHeight = 324;
     
+    [self.subjectTableView registerNib:[UINib nibWithNibName:@"SubjectCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
 }
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataArray.count;
+    
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //创建cell
+    SubjectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    //刷新数据
+    cell.model = self.dataArray [indexPath.row];
+    
+    return cell;
+}
+
+
 
 -(void)addMJRefresh
 {
@@ -93,11 +163,17 @@
     
     // 设置颜色
     footer.stateLabel.textColor = [UIColor blueColor];
-    
+    [self addMore];
     
     self.subjectTableView.mj_footer = footer;
 
 
+}
+
+#pragma mark 上拉加载
+-(void)addMore
+{
+    [self requestDataWithPage:(self.dataArray.count/5+1)];
 }
 
 -(void)refresh:(MJRefreshGifHeader *)header

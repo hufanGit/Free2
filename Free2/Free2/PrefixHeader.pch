@@ -15,6 +15,7 @@
 #import <MJRefresh.h>
 #import "Define.h"
 #import <AFNetworking.h>
+#import <UIImageView+AFNetworking.h>
 
 #import "CategoryModel.h"
 #import <YYModel.h>

@@ -10,7 +10,10 @@
 #import "SettingViewController.h"
 #import "CategoryViewController.h"
 #import "AppListModel.h"
+#import "HFSearchViewController.h"
 #import "AppListCell.h"
+
+#import "DetailViewController.h"
 
 
 @interface AppListViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
@@ -57,11 +60,11 @@
         printf("%s\n",self.cateId.UTF8String);
     }
     
-    NSLog(@"%@",dic);
+    //NSLog(@"%@",dic);
     //使用AFnetworking
     [self.requestManager GET:self.requestURL parameters:dic success:^(NSURLSessionDataTask *task, id responseObject)
     {
-    NSLog(@"第一界面请求成功");
+    //NSLog(@"第一界面请求成功");
         
         //请求到一个字典。
         
@@ -76,11 +79,11 @@
         //将模型放在数据源数组中
         [self.dataArray addObjectsFromArray:appArray];
         
-        printf("刷新后数组的长%lu\n",(unsigned long)self.dataArray.count);
+        //printf("刷新后数组的长%lu\n",(unsigned long)self.dataArray.count);
         
         //刷新
         [self.appTableView.mj_header endRefreshing];
-        printf("关闭头部刷新\n");
+       // printf("关闭头部刷新\n");
         
         [self.appTableView.mj_footer endRefreshing];
         
@@ -138,6 +141,10 @@
     [self.appTableView registerNib:[UINib nibWithNibName: @"AppListCell" bundle:nil] forCellReuseIdentifier:@"cell"];
 
     
+    
+    
+    
+    
     //添加搜索框，在cell 的上面
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, 0, 40)];
     searchBar.showsCancelButton = YES;
@@ -146,6 +153,10 @@
     searchBar.delegate =self;
     
     self.appTableView.tableHeaderView = searchBar;
+    
+    
+    
+    
 }
 
 #pragma mark 添加刷新
@@ -155,14 +166,14 @@
     self.appTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
        
         
-        printf("调用fresh\n");
+        //printf("调用fresh\n");
         //刷新
         //[self.appTableView.mj_header endRefreshing];
         //[self.appTableView.mj_header Refreshing];
 
         if ([self.appTableView.mj_header isRefreshing]) {
             [self.dataArray removeAllObjects];
-            printf("数组移除完毕%lu\n",(unsigned long)self.dataArray.count);
+            //printf("数组移除完毕%lu\n",(unsigned long)self.dataArray.count);
         }
         //重新请求
         [self resquestDataWithPage:1 search:@"" cate_ID:self.cateId];
@@ -182,6 +193,24 @@
 }
 
 #pragma mark tableview
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //创建
+    DetailViewController *detail = [DetailViewController new];
+    
+    //影藏导航条
+    detail.hidesBottomBarWhenPushed =YES;
+    
+    //拿到对应的模型 的数据id
+    AppListModel *model = self.dataArray [indexPath.row];
+    
+    detail.applicationId = model.applicationId;
+    
+    //跳转
+    [self.navigationController pushViewController:detail animated:YES];
+}
 
 
 //设置cell 数量
@@ -210,7 +239,19 @@
 //搜索按钮
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    //收齐键盘
+    [searchBar resignFirstResponder];
     
+    
+    HFSearchViewController *search =[[HFSearchViewController alloc]init];
+    
+    search.searchText = searchBar.text;
+    
+    search.requestURL = self.requestURL;
+    
+    search.hidesBottomBarWhenPushed = YES;
+    //跳转
+    [self.navigationController pushViewController:search animated:YES];
 }
 
 //点击取消
@@ -243,9 +284,6 @@
         self.cateId = cateID;
         
         
-        
-      
-        
         printf("block\n");
     
         
@@ -259,9 +297,11 @@
 //设置  的点击事件。
 -(void)setting:(UIButton *)button
 {
+    
     SettingViewController *setting = [[SettingViewController alloc]init];
     
     setting.hidesBottomBarWhenPushed = YES;
+    
     [self.navigationController pushViewController:setting animated:YES];
 }
 

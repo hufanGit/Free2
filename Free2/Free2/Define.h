@@ -65,7 +65,7 @@
 
 //周边使用应用接口:
 //参数longitude,latitude填写经度和纬度。
-#define kNearAppUrl @"http://iappfree.candou.com:8080/free/applications/recommend?longitude=%lf&latitude=%lf"
+#define kNearAppUrl @"http://iappfree.candou.com:8080/free/applications/recommend"
 
 
 

@@ -10,6 +10,9 @@
 
 @interface AppListModel : NSObject<YYModel>
 
+//appID
+@property(nonatomic,strong)NSString *applicationId;
+
 //头像
 @property(nonatomic,copy)NSString *iconUrl;
 

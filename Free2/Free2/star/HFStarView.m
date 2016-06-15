@@ -21,6 +21,45 @@
 
 @implementation HFStarView
 
+-(instancetype)init
+{
+    if (self = [super init]) {
+        [self CreateSubView];
+    }
+    return self;
+}
+
+//-(instancetype)initWithCoder:(NSCoder *)aDecoder
+//{
+//    if (self = [super initWithCoder:aDecoder]) {
+//        [self CreateSubView];
+//    }
+//}
+
+-(void)CreateSubView
+{
+   
+        //实例化
+        
+        //        NSLog(@"%@",NSStringFromCGRect(self.frame));
+        self.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"StarsBackground"]];
+        
+        [self addSubview:self.backgroundView];
+        
+        
+        self.foregroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"StarsForeground"]];
+        [self addSubview:self.foregroundView];
+        
+        
+        //设置前部图片剪切显示
+        [self.foregroundView setContentMode:UIViewContentModeLeft];
+        
+        self.foregroundView.clipsToBounds = YES;
+        
+ 
+}
+
+
 //当通过story or xib 创建时候会调用这个方法。
 //在这个方法可以拿到当前的视图的frame
 -(instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -34,9 +73,7 @@
         self.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"StarsBackground"]];
         
         [self addSubview:self.backgroundView];
-        
-        
-        
+
         
         self.foregroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"StarsForeground"]];
         [self addSubview:self.foregroundView];
@@ -50,6 +87,7 @@
     }
     return self;
 }
+
 
 //从外部给star赋值，算出长度
 -(void)setStartValue:(NSString *)startValue
